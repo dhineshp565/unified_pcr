@@ -61,7 +61,8 @@ class VariantCaller:
                     continue
                 
                 # Get reference base
-                ref_base = reference.get(chrom, [''])[pos] if pos < len(reference.get(chrom, [''])) else 'N'
+                ref_seq = reference.get(chrom, '')
+                ref_base = ref_seq[pos] if pos < len(ref_seq) else 'N'
                 
                 # Find variant alleles
                 for alt_base, count in bases.items():

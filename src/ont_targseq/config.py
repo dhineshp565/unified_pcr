@@ -4,6 +4,7 @@ Configuration management for ONT target sequencing pipeline
 
 import os
 import json
+import copy
 from typing import Dict, Any, Optional
 
 
@@ -45,7 +46,7 @@ class Config:
         Args:
             config_file: Path to JSON configuration file (optional)
         """
-        self.config = self.DEFAULT_CONFIG.copy()
+        self.config = copy.deepcopy(self.DEFAULT_CONFIG)
         
         if config_file and os.path.exists(config_file):
             self.load_config(config_file)
