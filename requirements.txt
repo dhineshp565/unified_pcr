@@ -1,0 +1,13 @@
+# Core dependencies for ONT Target Sequencing Pipeline
+
+# No external dependencies required for basic functionality
+# The pipeline is designed to work with Python standard library
+
+# Optional dependencies for enhanced functionality:
+# minimap2 - for production-grade alignment (install via conda or system package manager)
+# pysam - for BAM/SAM file handling
+# numpy - for numerical operations
+# matplotlib - for visualization
+
+# Development dependencies
+pytest>=7.0.0
